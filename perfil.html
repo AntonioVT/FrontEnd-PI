@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Premios Institucionales</title>
+  
+	<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600'>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Open Sans -->
+	<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600'>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<script src="js/global.js"></script>
+	
+	<script>
+	
+	function uploadImage(){
+		var x = document.getElementById("upImage").click();
+	}
+	
+	</script>
+
+	<link rel="stylesheet" href="css/stylec.css">
+</head>
+<body>
+	<!-- Navigation bar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<img src="img/logotec2.png" style="max-width: 24px; margin-top: 13px; float: left; margin-right: 8px;"/>
+				<a class="navbar-brand" href="inicioCandidato.html">Premios TEC</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Cerrar sesión</a></li>
+					<img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" class="avatar img-circle" alt="avatar" style="max-width: 28px; margin-top: 12px;">
+					<!--li><img src="svg/logout.svg" class="logout"></li-->
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+<div class="container fadeView">
+  <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 class="section-heading">Información Personal</h3>
+                    <hr class="shorthr">
+                </div>
+            </div>
+	</div>
+  <div class="row">
+    <!-- left column -->
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="text-center">
+        <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" class="avatar img-circle img-thumbnail" alt="avatar" style="max-width: 264px;" onClick="uploadImage();">
+        <input type="file" id ="upImage" class="text-center center-block well well-sm" style="display: none;">
+      </div>
+    </div>
+    <!-- edit form column -->
+    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Nombre(s):</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="Rubén Eugenio" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Apellido(s):</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="Cantú Vota" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Correo eléctronico:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="rubencv@hollowlife.com" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Contraseña:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="11111122333" type="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Confirmar contraseña:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="11111122333" type="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label"></label>
+          <div class="col-md-8">
+			<button type="reset" class="btn btn-default" style="margin-right:5px;">Cancelar</button>
+			<button type="button" class="btn btn-primary">Guardar Cambios</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 20px;">
+  	<div class="col-md-6 col-md-offset-3">
+		<div class="alert alert-info alert-dismissable">
+			<a class="panel-close close" data-dismiss="alert">×</a> 
+			<i class="fa fa-coffee"></i>
+			Los <strong>cambios</strong> han sido guardados.
+		</div>
+	</div>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+         

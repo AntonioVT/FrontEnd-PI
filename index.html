@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Premios Institucionales</title>
+  
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<!-- Open Sans -->
+	<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600'>
+	<!-- Login CSS -->
+	<link rel="stylesheet" href="./css/style.css">
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Login JS -->
+	<script type="text/javascript" src="./js/index.js" defer="defer"></script>
+	<!-- Global JS -->
+	<script type="text/javascript" src="./js/global.js" defer="defer"></script>
+</head>
+<body>
+	<div class="video-background">
+		<div class="video-foreground">
+		  <iframe src="https://www.youtube.com/embed/TxDmvPMf6Qo?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=TxDmvPMf6Qo&vq=hd720" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div id="vidtop-content">
+		  <div class="login-wrap"> 
+			<div class="login-html">
+				<img id="logoTec" src="./img/logotec.png" alt="Logo Tec">
+				<div class="option-tabs">
+					<input id="tab-1" type="radio" name="tab" class="sign-in" onchange="changeTab(true)" checked><label for="tab-1" class="tab">Inicio</label>
+					<input id="tab-2" type="radio" name="tab" class="sign-up" onchange="changeTab(false)"><label for="tab-2" class="tab">Registro</label>
+				</div>
+				<div class="login-form">
+					<div class="sign-in-htm">
+						<div class="int-group">
+							<label for="user" class="int-label">Correo Electrónico<span class="req">*</span></label>
+							<input id="user" class="int-input" type="text" required autocomplete="off"/>
+						</div>
+						<div class="int-group">
+							<label for="passlogin" class="int-label">Contraseña<span class="req">*</span></label>
+							<input id="passlogin" class="int-input" type="password" required autocomplete="off" data-type="password"/>
+						</div>
+						<div class="int-group">
+							<input id="check" type="checkbox" class="check" checked>
+							<label for="check"><span class="icon"></span> Recordarme</label>
+						</div>
+						<div class="int-group">
+							<input class="btn btn-primary" value="Iniciar Sesión" type="button" onclick="transformToNavBar()" style="width:100%;">
+						</div>
+						<hr class="custom-hr">
+						<div class="foot-lnk">
+							<a href="#" onclick="forgotPassword(true)">¿Olvidaste tu contraseña?</a>
+						</div>
+					</div>
+					<div class="sign-up-htm">
+					
+					
+						<div class="int-group">
+							<label for="name" class="int-label">Nombre(s)<span class="req">*</span></label>
+							<input id="name" class="int-input" type="text" required autocomplete="off"/>
+						</div>
+						<div class="int-group">
+							<label for="lname" class="int-label">Apellido(s)<span class="req">*</span></label>
+							<input id="lname" class="int-input" type="text" required autocomplete="off"/>
+						</div>
+						<div class="int-group">
+							<label for="email" class="int-label">Correo Electrónico<span class="req">*</span></label>
+							<input id="email" class="int-input" type="text" required autocomplete="off"/>
+						</div>
+						<div class="int-group">
+							<label for="passreg" class="int-label">Contraseña<span class="req">*</span></label>
+							<input id="passreg" class="int-input" type="password" required autocomplete="off" data-type="password"/>
+						</div>
+						<div class="int-group">
+							<label for="passreg2" class="int-label">Confirmar constraseña<span class="req">*</span></label>
+							<input id="passreg2" class="int-input" type="password" required autocomplete="off" data-type="password"/>
+						</div>
+						<div class="int-group">
+							<input class="btn btn-primary" value="Regístrate" type="button" style="width:100%;">
+						</div>
+						<hr class="custom-hr">
+						<div class="foot-lnk">
+							<label for="tab-1" style="cursor:pointer">¿Ya eres miembro?</a>
+						</div>
+					</div>
+					<div class="forgot-htm">
+						<div class="hide-content">
+							<div class="option-tabs">
+								<label class="tab">Recuperar Contraseña</label>
+							</div>
+							<div class="int-group">
+								<label for="userforgot" class="int-label">Correo Electrónico<span class="req">*</span></label>
+								<input id="userforgot" class="int-input" type="text" required autocomplete="off"/>
+							</div>
+							<div class="int-group">
+								<input class="btn btn-primary" value="Enviar" type="button" onclick="mailSentSuccessfully()" style="width:100%; margin-top:15px">
+							</div>
+						</div>
+						<hr class="custom-hr">
+						<div class="foot-lnk">
+							<a href="#" onclick="forgotPassword(false);">Volver al Inicio</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
