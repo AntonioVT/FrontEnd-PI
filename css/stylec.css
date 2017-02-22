@@ -230,6 +230,7 @@ hr{
   clear: both;
   margin: auto;
   margin-bottom: 40px;
+  opacity: 0;
 }
 
 /* Spinner Circle Rotation */
@@ -256,4 +257,18 @@ hr{
   to {
     transform: rotate(359deg);
   }
+}
+
+.change-password-success {
+	width: 64px;
+	height: 64px;
+	clear: both;
+	margin: auto;
+	margin-bottom: 40px;
+	opacity: 0;
+	background-image: url('../img/checkmark-64.png');
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+	z-index: 20;
 }
