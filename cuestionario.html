@@ -54,18 +54,28 @@
 		</div>
 
 		<form>
-		<div class="row">
-			<div>
+		<div class="row question-form">
+			<div class="question-box">
 				<h5> 1. ¿Lorem ipsum dolor sit amet, consectetur adipiscing elit? </h5>
-				<span> 750. Caracteres restantes <span>
-				<textarea class="form-control form-text-area" rows="4"></textarea>
+				<p> 500 caracteres restantes </p>
+				<textarea class="form-control form-text-area scrollbar-custom" rows="4" maxlength="500" onkeyup="updateCharactersLeft(this);"></textarea>
 				<br/>
 			</div>
-			<div>
+			<div class="question-box">
 				<h5> 2. ¿Lorem ipsum dolor sit amet, consectetur adipiscing elit? </h5>
-				<span> 750. Caracteres restantes <span>
-				<textarea class="form-control form-text-area" rows="4"></textarea>
+				<p> 500 caracteres restantes </p>
+				<textarea class="form-control form-text-area scrollbar-custom" rows="4" maxlength="500" onkeyup="updateCharactersLeft(this);"></textarea>
 				<br/>
+			</div>
+			<div class="question-box">
+				<h5> 3. ¿Lorem ipsum dolor sit amet, consectetur adipiscing elit? </h5>
+				<p> 500 caracteres restantes </p>
+				<textarea class="form-control form-text-area scrollbar-custom" rows="4" maxlength="500" onkeyup="updateCharactersLeft(this);"></textarea>
+				<br/>
+			</div>
+			<div class="btn-group-right">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				<button type="button" class="btn btn-primary">Enviar</button>
 			</div>
 		</div>
 		</form>
