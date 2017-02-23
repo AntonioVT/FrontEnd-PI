@@ -58,11 +58,16 @@
     </div>
     <div class="row">
       <!-- left column -->
-      <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="col-md-4 col-sm-6 col-xs-12" style="height: 100%;">
         <div class="text-center">
-          <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" class="avatar img-circle img-thumbnail" alt="avatar" style="max-width: 264px;" onClick="uploadImage();">
+          <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" class="avatar img-circle img-thumbnail avatar-upload" alt="avatar" style="max-width: 264px;" onClick="uploadImage();">
           <input type="file" id ="upImage" class="text-center center-block well well-sm" style="display: none;">
         </div>
+        <div class="form-group">
+              <div class="btn-group-mid">
+                <button onClick="uploadImage();" type="button" class="btn btn-default">Cambiar imagen de perfil</button>
+            </div>
+          </div>
       </div>
       <!-- edit form column -->
       <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
@@ -86,33 +91,44 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-3 control-label">Contraseña:</label>
+            <label class="col-lg-3 control-label">Direccion:</label>
             <div class="col-lg-8">
-              <input class="form-control" value="11111122333" type="password">
+              <input class="form-control" value="Garza Sada 64989" type="text">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-3 control-label">Confirmar contraseña:</label>
+            <label class="col-lg-3 control-label">Teléfono:</label>
             <div class="col-lg-8">
-              <input class="form-control" value="11111122333" type="password">
+              <input class="form-control" value="XXX-XXXX-XXXX" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">RFC:</label>
+            <div class="col-lg-8">
+              <input class="form-control" value="AJUA102343" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Nacionalidad:</label>
+            <div class="col-lg-8">
+              <input class="form-control" value="Mexicana" type="text">
             </div>
           </div>
           <div class="form-group">
             <div class="col-md-11">
               <div class="btn-group-right">
-                <a data-toggle="modal" data-target="#modalChangePassword"><button type="button" class="btn btn-default">Cambiar contraseña</button></a>
-                <button type="reset" class="btn btn-default">Cancelar</button>
-                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                <a data-toggle="modal" data-target="#modalChangePassword" onclick="openChangePasswordModal()"><button type="button" class="btn btn-default">Cambiar contraseña</button></a>
+                <button type="button" class="btn btn-primary" onclick="saveChanges()">Guardar Cambios</button>
               </div>
             </div>
           </div>
         </form>
       </div>
     </div>
-    <div class="row" style="margin-top: 20px;">
+    <div class="row" style="margin-top: 20px;" id="changeAlert">
       <div class="col-md-6 col-md-offset-3">
       <div class="alert alert-info alert-dismissable">
-        <a class="panel-close close" data-dismiss="alert">×</a> 
+        <a class="panel-close close" onclick="closeAlert()">×</a> 
         <i class="fa fa-coffee"></i>
         Los <strong>cambios</strong> han sido guardados.
       </div>
@@ -155,7 +171,7 @@
               </div>
             </form>
             <div class="sp sp-circle" id="loadingSpinner"></div>
-            <div class="change-password-success" id="passwordCheckMark"></div>
+            <img class="change-password-success" id="passwordCheckMark" src="svg/checkmark.svg"></img>
         </div>
     </div>
 	</div>

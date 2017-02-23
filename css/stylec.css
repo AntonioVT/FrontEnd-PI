@@ -225,8 +225,8 @@ hr{
 }
 
 .sp {
-  width: 64px;
-  height: 64px;
+  width: 96px;
+  height: 96px;
   clear: both;
   margin: auto;
   margin-bottom: 40px;
@@ -235,8 +235,8 @@ hr{
 
 /* Spinner Circle Rotation */
 .sp-circle {
-  border: 4px #bdbdbd solid;
-  border-top: 4px #00acc1 solid;
+  border: 6px #bdbdbd solid;
+  border-top: 6px #00acc1 solid;
   border-radius: 50%;
   -webkit-animation: spCircRot .6s infinite linear;
   animation: spCircRot .6s infinite linear;
@@ -260,15 +260,36 @@ hr{
 }
 
 .change-password-success {
-	width: 64px;
-	height: 64px;
+	width: 74px;
+	height: 74px;
 	clear: both;
 	margin: auto;
-	margin-bottom: 40px;
+	margin-bottom: 54px;
+	margin-top: 9px;
 	opacity: 0;
-	background-image: url('../img/checkmark-64.png');
+	/*background-image: url('../img/checkmark-64.png');*/
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 	z-index: 20;
 }
+
+.avatar-upload {
+	cursor: pointer;
+}
+
+.dt-profile-pic{
+	width: 5%;
+}
+
+table.dataTable tr.odd,
+table.dataTable tr.even,
+.sorting_1 { 
+	background-color: white !important;
+}
+
+table.dataTable tbody tr:hover {
+	background-color: rgba(0, 0, 0, 0.1) !important;
+	cursor: pointer;
+}
+
