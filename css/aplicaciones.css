@@ -1,11 +1,11 @@
-.proceso {
+.bpm-process {
 	margin-top:15px;
 	margin-bottom:15px;
 }
 
-.proceso a,
-.proceso a:visited,
-.proceso a:hover
+.bpm-process a,
+.bpm-process a:visited,
+.bpm-process a:hover
  {
 	height: 40px;
 	cursor: default;
@@ -17,12 +17,9 @@
 }
 
 .img-premio{
-	max-width: 300px;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	padding: 10px;
+	max-width: 100%;
+ display:block;
+    margin:auto;
 }
 
 .nav-wizard > li {
