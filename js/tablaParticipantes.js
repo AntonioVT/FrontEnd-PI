@@ -6,6 +6,4 @@ $(document).ready(function(){
         "aaSorting": [],
         "order": [[ 3, "asc" ]]
     });
-    
-    
 });
