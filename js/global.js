@@ -30,6 +30,11 @@ function getProfileReferences () {
 	svPasswordCheckMark = passwordCheckMark.innerHTML;
 }
 
+function getPremiosReferences () {
+	changeAlert = document.getElementById('changeAlert');
+	changeAlert.style.display = 'none';
+}
+
 function openChangePasswordModal () {
 	 loadingSpinner.innerHTML = svLoadingSpinner;
 	 changePasswordForm.innerHTML = svChangePasswordForm;
