@@ -465,6 +465,7 @@ div.userHeader{
 	margin: auto;
 	margin-top: 32px;
 	width: 100%;
+	max-width: 800px;
 }
 
 .service-list:hover {
