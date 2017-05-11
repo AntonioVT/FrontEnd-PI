@@ -19,9 +19,12 @@
 
 	<link rel="stylesheet" href="css/stylec.css">
 	<link rel="stylesheet" href="css/stylePremiosJuez.css">
+	
+	<!-- Custom CSS -->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
 
 </head>
-<body>
+<body style="background-color: white;">
 	<!-- Navigation bar -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -85,35 +88,91 @@
 		<div class="row">
 			<div class="blockquote-box">
 				<div class="col-sm-2 prem-img">
-					<img src="img/Premio-Eugenio-Garza-Sada.jpg" class="img-square"/>
+					<img src="img/Premio-Eugenio-Garza-Sada.jpg" class="img-square" style="margin-top: 15px; margin-bottom: 15px;"/>
 				</div>
 				<div class="tab-content col-sm-8 prem-info">
 					<div id="info" class="tab-pane fade in active">
-						<h4>Eugenio Garza Sada</h4>
+						<h4>Premio: <strong>Eugenio Garza Sada</strong></h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
 					<div id="alumnos" class="tab-pane fade">
-						<h4>Alumnos</h4>
-						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<div class="row" style="margin-top:15px;">
+							<!-- Dashboard -->
+							<div class="col-sm-6" style="text-align: center; margin-bottom:-5px; margin-left:-25px;">
+								<!-- Todas -->
+								<div  style="margin-right:7.5px; margin-left:7.5px; width:95px; display: inline-block;">
+									<div class="panel panel-primary">
+										<div class="panel-heading">
+											<div class="row" style="text-align: center;">
+												<div class="huge">5</div>
+											</div>
+										</div>
+										<a href="#">
+											<div class="panel-footer" style="background-color: white;">
+												<span style="text-align: center;"><strong>Totales</strong></span>
+												<div class="clearfix"></div>
+											</div>
+										</a>
+									</div>
+								</div>
+								
+								<!-- Completas -->
+								<div  style="margin-right:7.5px; margin-left:7.5px; width:95px; display: inline-block;">
+									<div class="panel panel-green">
+										<div class="panel-heading">
+											<div class="row" style="text-align: center;">
+												<div class="huge">3</div>
+											</div>
+										</div>
+										<a href="#">
+											<div class="panel-footer" style="background-color: white;">
+												<span style="text-align: center;"><strong>Completas</strong></span>
+												<div class="clearfix"></div>
+											</div>
+										</a>
+									</div>
+								</div>
+								
+								<!-- Nuevas/Pendientes -->
+								<div  style="margin-right:7.5px; margin-left:7.5px; width:95px; display: inline-block;">
+									<div class="panel panel-yellow">
+										<div class="panel-heading">
+											<div class="row" style="text-align: center;">
+												<div class="huge">2</div>
+											</div>
+										</div>
+										<a href="#">
+											<div class="panel-footer" style="background-color: white;">
+												<span style="text-align: center;"><strong>Nuevas</strong></span>
+												<div class="clearfix"></div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Texto -->
+							<div class="col-sm-6">
+								<p>
+									<h4>Categoria: <strong>Alumnos</strong></h4>
+									Recuerda que tienes hasta el día <strong>XX/YY/ZZZZ</strong> para evaluar todas tus aplicaciones.
+								</p>
+								<span class="pull-right">
+									<button type="button" class="btn btn-primary" style="margin-top:5px; margin-bottom:15px;">Ver Aplicaciones</button>
+								</span>
+							</div>
+						</div>
 					</div>
-					<div id="profesores" class="tab-pane fade">
-						<h4>Profesores</h4>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-					</div>
-					<div id="exatec" class="tab-pane fade">
-						<h4>Exatec</h4>
-						<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-					</div>
+
 				</div>
 				<div class="vtab-row col-sm-2 prem-tabs">
 					<ul class="nav nav-tabs tabs-right" style="text-align: right;">
 						<li class="active"><a href="#info" data-toggle="tab">Info General </a></li>
 						<li><a href="#alumnos" data-toggle="tab">Alumnos <span class="badge" style="font-weight: bold;">5</span></a></li>
-						<li><a href="#profesores" data-toggle="tab">Profesores <span class="badge" style="font-weight: bold;">16</span></a></li>
-						<li><a href="#exatec" data-toggle="tab">Exatec <span class="badge" style="font-weight: bold;">2</span></a></li>
 					</ul>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 </body>

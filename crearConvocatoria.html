@@ -1,232 +1,211 @@
 <!DOCTYPE html>
-<html >
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width">
-      <title>Premios Institucionales</title>
-      <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600'>
-      <!-- Latest compiled and minified CSS -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <!-- Open Sans -->
-      <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600'>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <!-- Latest compiled and minified JavaScript -->
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/global.js"></script>
-      <script src="js/jquery.dataTables.js"></script>
-      <script src="js/tablaParticipantes.js"></script>
-      <link rel="stylesheet" href="css/jquery-ui.css">
-      <script src="js/jquery-ui.js"></script>
-      <script src="js/jquery-ui.multidatespicker.js"></script>
-      <script>
-         function aux(diff, dates)
-         {
-             $('#datepicker').multiDatesPicker({
-                 onSelect: function(date){printDates(date)},
-                 altField: '#altField',
-                 maxPicks: 3,
-                 minDate: diff,
-                 addDates: dates
-         });
-         }
-         
-         function printDates(date) {
-         
-             
-         
-         
-             var dates = $('#datepicker').multiDatesPicker('getDates');
-         
-             var diff = Math.ceil(Math.abs(new Date() - new Date(date)) / 86400000);
-         
-             
-         
-             var dates = $('#datepicker').multiDatesPicker('getDates');
-         
-             $('#datepicker').multiDatesPicker('destroy');
-             aux(diff, dates)
-         
-             console.log(dates);
-         }
-         
-         function uploadImage(){
-             var x = document.getElementById("upImage").click();
-         }
-         $(function() {
-             $('#datepicker').multiDatesPicker({
-                      onSelect: function(date){printDates(date)},
-         altField: '#altField',
-         maxPicks: 3,
-         minDate: 0
-         });
-         });
-      </script>
-      <link rel="stylesheet" href="css/dataTables.css">
-      <link rel="stylesheet" href="css/stylec.css">
-   </head>
-   <body onload="getPremiosReferences()">
-      <!-- Navigation bar -->
-      <nav class="navbar navbar-default navbar-fixed-top">
-         <div class="container">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Premios Institucionales</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Open Sans -->
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.multidatespicker.js"></script>
+    <link rel="stylesheet" href="css/dataTables.css">
+    <link rel="stylesheet" href="css/stylec.css">
+    <script src="js/crearConvocatoria.js" defer="defer"></script>
+
+</head>
+
+<body onload="getPremiosReferences()">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
             <div class="navbar-header">
-               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
                <span class="sr-only">Toggle navigation</span>
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                </button>
-               <img src="img/logotec2.png" style="max-width: 24px; margin-top: 13px; float: left; margin-right: 8px;"/>
-               <a class="navbar-brand" href="inicioCandidato.html">Premios TEC</a>
+                <img src="img/logotec2.png" style="max-width: 24px; margin-top: 13px; float: left; margin-right: 8px;" />
+                <a class="navbar-brand" href="inicioCandidato.html">Premios TEC</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-               <ul class="nav navbar-nav navbar-right">
-                  <li><a href="index.html">Cerrar sesión</a></li>
-                  <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" class="avatar img-circle" alt="avatar" style="max-width: 28px; margin-top: 12px;">
-                  <!--li><img src="svg/logout.svg" class="logout"></li-->
-               </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Cerrar sesión</a></li>
+                    <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" class="avatar img-circle" alt="avatar"
+                        style="max-width: 28px; margin-top: 12px;">
+                    <!--li><img src="svg/logout.svg" class="logout"></li-->
+                </ul>
             </div>
             <!--/.nav-collapse -->
-         </div>
-      </nav>
-      <!-- Home component -->
-      <div class="container fadeView">
-         <div class="container">
+        </div>
+    </nav>
+    <!-- Home component -->
+    <div class="container fadeView">
+        <div class="container">
             <div class="row">
-               <div class="col-lg-12 text-center">
-                  <h3 class="section-heading"> Administrar Premio </h3>
-                  <hr class="shorthr">
-               </div>
+                <div class="col-lg-12 text-center">
+                    <h3 class="section-heading"> Administrar Premio </h3>
+                    <hr class="shorthr">
+                </div>
             </div>
-         </div>
-         <div class="row">
+        </div>
+        <div class="row">
             <!-- left column -->
             <div class="col-md-4 col-sm-6 col-xs-12" style="height: 100%;">
-               <div class="text-center">
-                  <img src="http://inspired-bd.com/wp-content/uploads/2016/07/trophy200.png" class="avatar img-circle img-thumbnail avatar-upload" alt="avatar" style="max-width: 224px;" onClick="uploadImage();">
-                  <input type="file" id ="upImage" class="text-center center-block well well-sm" style="display: none;">
-               </div>
-               <div class="form-group">
-                  <div class="btn-group-mid">
-                     <button onClick="uploadImage();" type="button" class="btn btn-default">Cambiar imagen del premio</button>
-                  </div>
-               </div>
+
+                <div class="box">
+                    <div class="js--image-preview"></div>
+                </div>
+
+                <div class="form-group">
+                    <div class="btn-group-mid">
+                        <button onClick="uploadImage();" type="button" class="btn btn-default">Cambiar imagen del premio</button>
+                    </div>
+                </div>
             </div>
             <!-- edit form column -->
             <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
-               <form class="form-horizontal" role="form">
-                  <div class="form-group">
-                     <label class="col-lg-3 control-label">Nombre Premio:</label>
-                     <div class="col-lg-8">
-                        <input class="form-control" value="Eugenio Garza Sada" type="text">
-                        <br />
-                     </div>
-                     <label class="col-lg-3 control-label">Descripción Premio:</label>
-                     <div class="question-box col-lg-8">
-                        <textarea class="form-control form-text-area scrollbar-custom" rows="5" maxlength="500" onkeyup="updateCharactersLeft(this);"></textarea>
-                        <p> 500 caracteres restantes </p>
-                     </div>
-                  </div>
-                  <div class="form-group">
-                     <div class="col-md-11">
-                        <div class="btn-group-right">
-                           <button type="button" class="btn btn-primary" onclick="saveChanges()">Guardar Cambios</button>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Nombre Premio:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" value="Eugenio Garza Sada" type="text">
+                            <br />
                         </div>
-                     </div>
-                  </div>
-               </form>
+                        <label class="col-lg-3 control-label">Descripción Premio:</label>
+                        <div class="question-box col-lg-8">
+                            <textarea class="form-control form-text-area scrollbar-custom" rows="5" maxlength="500" onkeyup="updateCharactersLeft(this);"></textarea>
+                            <p> 500 caracteres restantes </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-11">
+                            <div class="btn-group-right">
+                                <button type="button" class="btn btn-primary" onclick="saveChanges()">Guardar Cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="row" style="margin-top: 20px;" id="changeAlert">
-               <div class="col-md-6 col-md-offset-3">
-                  <div class="alert alert-info alert-dismissable">
-                     <a class="panel-close close" onclick="closeAlert()">×</a> 
-                     <i class="fa fa-coffee"></i>
-                     Los <strong>cambios</strong> han sido guardados.
-                  </div>
-               </div>
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="alert alert-info alert-dismissable">
+                        <a class="panel-close close" onclick="closeAlert()">×</a>
+                        <i class="fa fa-coffee"></i> Los <strong>cambios</strong> han sido guardados.
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class="container">
+        </div>
+        <div class="container">
             <h4 class="section-heading"> Convocatorias </h4>
             <table id="listaParticipantesTable" class="display" cellspacing="0" width="100%">
-               <thead>
-                  <tr>
-                     <th>
-                        <a data-toggle="modal" data-target="#modalChangePassword" style="cursor: pointer;">
-                        <img src="svg/plus.svg" class="avatar img-circle" alt="avatar" style="width: 28px; margin-left:-7px;">
-                        </a>
-                     </th>
-                     <th>Nombre</th>
-                     <th>Fecha Inicio</th>
-                     <th>Fecha Fin</th>
-                     <th>Fecha Veredicto</th>
-                     <th>Estado</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="dt-profile-pic">
-                        <img src="http://inspired-bd.com/wp-content/uploads/2016/07/trophy200.png" class="avatar img-circle" alt="avatar" style="max-width: 28px;">
-                     </td>
-                     <td>Primavera 2016</td>
-                     <td>26/03/2016</td>
-                     <td>28/04/2016</td>
-                     <td>05/05/2016</td>
-                     <td style="color: #f44336">
-                        <strong>
+                <thead>
+                    <tr>
+                        <th>
+                            <a data-toggle="modal" data-target="#modalCrearConvocatoria" style="cursor: pointer;">
+                                <img src="svg/plus.svg" class="avatar img-circle" alt="avatar" style="width: 28px; margin-left:-7px;">
+                            </a>
+                        </th>
+                        <th>Nombre</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Fin</th>
+                        <th>Fecha Veredicto</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="dt-profile-pic">
+                            <img src="http://inspired-bd.com/wp-content/uploads/2016/07/trophy200.png" class="avatar img-circle" alt="avatar" style="max-width: 28px;">
+                        </td>
+                        <td>Primavera 2016</td>
+                        <td>26/03/2016</td>
+                        <td>28/04/2016</td>
+                        <td>05/05/2016</td>
+                        <td style="color: #f44336">
+                            <strong>
                            <div style="display: none;"> 2 </div>
                            Cerrada 
                         </strong>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td class="dt-profile-pic">
-                        <img src="http://inspired-bd.com/wp-content/uploads/2016/07/trophy200.png" class="avatar img-circle" alt="avatar" style="max-width: 28px;">
-                     </td>
-                     <td>Primavera 2017</td>
-                     <td>26/03/2017</td>
-                     <td>28/04/2017</td>
-                     <td>05/05/2017</td>
-                     <td style="color: #4caf50">
-                        <strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="dt-profile-pic">
+                            <img src="http://inspired-bd.com/wp-content/uploads/2016/07/trophy200.png" class="avatar img-circle" alt="avatar" style="max-width: 28px;">
+                        </td>
+                        <td>Primavera 2017</td>
+                        <td>26/03/2017</td>
+                        <td>28/04/2017</td>
+                        <td>05/05/2017</td>
+                        <td style="color: #4caf50">
+                            <strong>
                            <div style="display: none;"> 2 </div>
                            Abierta 
                         </strong>
-                     </td>
-                  </tr>
-               </tbody>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
-         </div>
-      </div>
-      <!-- Modal cambiar password -->
-      <div class="modal fade" id="modalChangePassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-         <div class="modal-dialog" role="document">
+        </div>
+    </div>
+    <!-- Modal  -->
+    <div class="modal fade" id="modalCrearConvocatoria" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
-               <div class="modal-header text-center">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h3 class="modal-title" id="myModalLabel">Nueva Convocatoria</h3>
-               </div>
-               <form class="form-horizontal" role="form" id="changePasswordForm">
-                  <div class="modal-body">
-                     <div class="form-group">
-                        <label class="col-lg-4 control-label">Nombre Convocatoria:</label>
-                        <div class="col-lg-8">
-                           <input class="form-control" type="text" style="width: 90%;"/>
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel">Nueva Convocatoria</h3>
+                </div>
+                <div class="form-horizontal" role="form" id="changePasswordForm">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">Nombre Convocatoria:</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" type="text" style="width: 90%;" />
+                            </div>
                         </div>
-                     </div>
-                     <div class="form-group" style="margin-top: 50px;">
-                        <label class="col-lg-4 control-label"> Fechas: </label>
-                        <div class="col-lg-8">
-                           <div id="datepicker"></div>
+                        <div class="form-group" style="margin-top: 35px;">
+                            <label class="col-lg-4 control-label"> Fechas: </label>
+                            <div class="col-lg-8">
+                                <div id="datepicker"></div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-                  <div class="modal-footer">
-                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                     <button type="button" class="btn btn-primary">Crear</button>
-                  </div>
-               </form>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label"> Fecha Inicio: </label>
+                            <div class="col-lg-8">
+                                <input id="fechaI" class="form-control" type="text" style="width: 90%;" readonly/>
+                            </div>
+
+                                <label class="col-lg-4 control-label"> Fecha Fin: </label>
+                            <div class="col-lg-8">
+                                <input id="fechaF" class="form-control" type="text" style="width: 90%;" readonly/>
+                            </div>
+
+                            <label class="col-lg-4 control-label"> Fecha Veredicto: </label>
+                            <div class="col-lg-8">
+                                <input id="fechaV" class="form-control" type="text" style="width: 90%;" readonly/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Crear</button>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </body>
+        </div>
+    </div>
+</body>
+
 </html>
